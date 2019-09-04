@@ -9,11 +9,10 @@ const FlightCards = props => {
         return (
           <Col>
             <Card body>
-              <CardTitle>{each.agent}</CardTitle>
-              <CardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </CardText>
+              <CardTitle>
+                {each.agent} <h2>{each.price.replace("Â", "")}</h2>
+              </CardTitle>
+              <CardText>text he re £ content.</CardText>
               <Button>Go somewhere</Button>
             </Card>
           </Col>
