@@ -7,7 +7,6 @@ import WizAir from "../Data/images/Wizzair.png";
 import BritishAirways from "../Data/images/BritishAirways.png";
 
 const FlightCards = props => {
-  console.log("data here", data);
   const timeConvert = n => {
     let num = n;
     let hours = num / 60;
@@ -21,15 +20,14 @@ const FlightCards = props => {
     "Wizz Air": WizAir,
     Lufthansa: LAirways
   };
-  console.log(airways);
 
   return (
     <Row>
       {data["itineraries"].map(each => {
         let departures = data.legs.filter(leg => leg.id == each.legs[0]);
-        console.log(departures);
+
         let arrivals = data.legs.filter(leg => leg.id == each.legs[1]);
-        console.log(arrivals);
+
         return (
           <Col>
             <Card body>
@@ -77,7 +75,7 @@ const FlightCards = props => {
                         src={airways[arrivals[0].airline_name]}
                       />
                     </td>
-                                        <th scope="row">{arrivals[0].airline_name}</th>
+                    <th scope="row">{arrivals[0].airline_name}</th>
 
                     <td>
                       {arrivals[0].departure_time.split("T")[1]} |{" "}
@@ -97,8 +95,9 @@ const FlightCards = props => {
               <CardText />
               <Button
                 color="success"
+                width="250px"
                 onClick={() => {
-                  alert("You request has been succesfully delivered!");
+                  alert("Your request has been succesfully delivered!");
                 }}
               >
                 Book Now
