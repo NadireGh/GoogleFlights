@@ -30,7 +30,7 @@ const FlightCards = props => {
 
         return (
           <Col>
-            <Card body>
+            <Card>
               <CardTitle>
                 {each.agent} <h2>{each.price.replace("Â", "")}</h2>
               </CardTitle>
