@@ -8,9 +8,9 @@ GoogleFlights is a React JS static site.
 
 
 ## Technologies used:
-.Javascript
-.React JS
-.CSS (animate CSS)
-.BootStrap/ReactStrap
+*Javascript
+*React JS
+*CSS (animate CSS)
+*BootStrap/ReactStrap
 
 
